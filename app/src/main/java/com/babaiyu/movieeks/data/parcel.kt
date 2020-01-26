@@ -9,6 +9,8 @@ data class DataType (
     var release: String,
     var description: String,
     var score: String,
-    var genre: Array<String>,
+    var duration: String,
+    var director: String,
+    var caster: String,
     var photo: Int
 ): Parcelable
