@@ -16,7 +16,7 @@ data class DataDetail (
 ): Parcelable
 
 @Parcelize
-data class MovieList(
+data class CardList(
     var title: String,
     var release: String,
     var description: String,

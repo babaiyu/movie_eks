@@ -24,17 +24,20 @@
 
         <TextView
             android:id="@+id/item_title"
+            style="@style/TextTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/title" />
 
         <TextView
             android:id="@+id/item_release"
+            style="@style/TextSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/release" />
 
         <TextView
+            style="@style/TextMedium"
             android:id="@+id/item_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

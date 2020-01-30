@@ -4,28 +4,58 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.babaiyu.movieeks.R
+import com.babaiyu.movieeks.`interface`.CardList
+import com.babaiyu.movieeks.components.CardListAdapter
 
-class DashboardFragment : Fragment() {
+class DashboardFragment : Fragment(), View.OnClickListener {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    override fun onClick(v: View) {}
+
+    private lateinit var rvTVShow: RecyclerView
+    private val listTVShow = ArrayList<CardList>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-            ViewModelProviders.of(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(this, Observer {
-            textView.text = it
-        })
-        return root
+        val rootView = inflater.inflate(R.layout.fragment_dashboard, container, false)
+
+        rvTVShow = rootView.findViewById(R.id.rv_tv_show)
+        rvTVShow.setHasFixedSize(true)
+
+        listTVShow.addAll(getListTVShows())
+        showTVShows()
+
+        return rootView
+    }
+
+    private fun getListTVShows(): ArrayList<CardList> {
+        val tvTitle = resources.getStringArray(R.array.tv_title)
+        val tvRelease = resources.getStringArray(R.array.tv_release)
+        val tvDescription = resources.getStringArray(R.array.tv_description)
+        val tvPhoto = resources.obtainTypedArray(R.array.tv_photo)
+
+        val list = ArrayList<CardList>()
+        for (index in tvTitle.indices) {
+            val tv = CardList(
+                tvTitle[index],
+                tvRelease[index],
+                tvDescription[index],
+                tvPhoto.getResourceId(index, -1)
+            )
+            list.add(tv)
+        }
+        return list
+    }
+
+    private fun showTVShows() {
+        rvTVShow.layoutManager = LinearLayoutManager(activity)
+        val listTVShowAdapter = CardListAdapter(listTVShow)
+        rvTVShow.adapter = listTVShowAdapter
     }
 }

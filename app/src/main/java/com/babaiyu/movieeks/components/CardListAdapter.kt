@@ -7,17 +7,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.babaiyu.movieeks.R
-import com.babaiyu.movieeks.`interface`.MovieList
+import com.babaiyu.movieeks.`interface`.CardList
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.Request
 import com.bumptech.glide.request.RequestOptions
-import kotlinx.android.synthetic.main.card_item.view.*
-import org.w3c.dom.Text
 
-class CardListAdapter(private val listItem: ArrayList<MovieList>) :
+class CardListAdapter(private val listItem: ArrayList<CardList>) :
     RecyclerView.Adapter<CardListAdapter.CardListHolder>() {
 
-    var onItemClick: ((MovieList) -> Unit)? = null
+    var onItemClick: ((CardList) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardListHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_item, parent, false)

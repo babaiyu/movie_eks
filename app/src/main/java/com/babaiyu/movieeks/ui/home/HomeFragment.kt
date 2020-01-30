@@ -5,20 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.babaiyu.movieeks.R
-import com.babaiyu.movieeks.`interface`.MovieList
+import com.babaiyu.movieeks.`interface`.CardList
 import com.babaiyu.movieeks.components.CardListAdapter
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View) {}
 
     private lateinit var rvMovies: RecyclerView
-    private val listMovie = ArrayList<MovieList>()
+    private val listMovie = ArrayList<CardList>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,15 +34,15 @@ class HomeFragment : Fragment(), View.OnClickListener {
         return rootView
     }
 
-    private fun getListMovie(): ArrayList<MovieList> {
+    private fun getListMovie(): ArrayList<CardList> {
         val movieTitle = resources.getStringArray(R.array.movie_title)
         val movieRelease = resources.getStringArray(R.array.movie_release)
         val movieDescription = resources.getStringArray(R.array.movie_description)
         val moviePhoto = resources.obtainTypedArray(R.array.movie_photo)
 
-        val list = ArrayList<MovieList>()
+        val list = ArrayList<CardList>()
         for (index in movieTitle.indices) {
-            val movie = MovieList(
+            val movie = CardList(
                 movieTitle[index],
                 movieRelease[index],
                 movieDescription[index],
