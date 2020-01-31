@@ -8,13 +8,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.babaiyu.movieeks.R
 import com.babaiyu.movieeks.`interface`.CardList
+import com.babaiyu.movieeks.`interface`.DataDetail
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
-class CardListAdapter(private val listItem: ArrayList<CardList>) :
+class CardListAdapter(private val listItem: ArrayList<DataDetail>) :
     RecyclerView.Adapter<CardListAdapter.CardListHolder>() {
 
-    var onItemClick: ((CardList) -> Unit)? = null
+    var onItemClick: ((DataDetail) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardListHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_item, parent, false)
@@ -26,7 +27,7 @@ class CardListAdapter(private val listItem: ArrayList<CardList>) :
     }
 
     override fun onBindViewHolder(holder: CardListHolder, position: Int) {
-        val (title, release, description, photo) = listItem[position]
+        val (title, release, description, score, duration, director, caster, photo) = listItem[position]
 
         Glide.with(holder.itemView.context)
             .load(photo)
