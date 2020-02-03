@@ -9,6 +9,14 @@ androidExtensions {
 }
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('movie_keystore')
+            storePassword 'qwerty123'
+            keyAlias = 'movie_keystore'
+            keyPassword 'qwerty123'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
