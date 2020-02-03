@@ -22,7 +22,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         val detail = intent.getParcelableExtra(EXTRA_DATA) as DataDetail
         title = detail.title
         detail_title.text = detail.title
-        detail_score.text = "${detail.score}%"
+        detail_score.text = detail.score
         detail_release.text = detail.release
         detail_duration.text = detail.duration
         detail_director.text = detail.director

@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.babaiyu.movieeks.ui.home.HomeFragment"
-        android:label="Movies"
+        android:label="Movie Eks"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_navigation_home_to_detailActivity"
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.babaiyu.movieeks.ui.dashboard.DashboardFragment"
-        android:label="TV Shows"
+        android:label="Movie Eks"
         tools:layout="@layout/fragment_dashboard" >
         <action
             android:id="@+id/action_navigation_dashboard_to_detailActivity"

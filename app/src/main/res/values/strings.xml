@@ -13,6 +13,8 @@
     <string name="director">Director</string>
     <string name="description">Description</string>
     <string name="caster">Caster</string>
+    
+    <string name="change_language">Change Language</string>
 
     <!--    ========== MOVIES ==========-->
     <string-array name="movie_title">
