@@ -2,12 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@drawable/card_style"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp"
-    android:layout_marginRight="16dp"
     android:layout_marginLeft="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/card_style"
+    android:orientation="vertical"
     android:padding="15dp">
 
     <ImageView
@@ -32,13 +32,14 @@
         <TextView
             android:id="@+id/item_release"
             style="@style/TextSmall"
+            android:textColor="@color/colorPrimary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/release" />
 
         <TextView
-            style="@style/TextMedium"
             android:id="@+id/item_description"
+            style="@style/TextSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lines="3"

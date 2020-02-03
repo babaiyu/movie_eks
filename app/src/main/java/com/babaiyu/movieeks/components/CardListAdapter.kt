@@ -31,7 +31,6 @@ class CardListAdapter(private val listItem: ArrayList<DataDetail>) :
 
         Glide.with(holder.itemView.context)
             .load(photo)
-            .apply(RequestOptions().override(100, 100))
             .into(holder.photo)
         holder.title.text = title
         holder.release.text = release

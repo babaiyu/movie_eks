@@ -8,7 +8,11 @@
     <string name="image_banner">Image Banner</string>
     <string name="title">Title</string>
     <string name="release">Release</string>
+    <string name="score">score</string>
+    <string name="duration">Duration</string>
+    <string name="director">Director</string>
     <string name="description">Description</string>
+    <string name="caster">Caster</string>
 
     <!--    ========== MOVIES ==========-->
     <string-array name="movie_title">
@@ -126,14 +130,14 @@
         <item>David Yates</item>
         <item>M. Night Shyamalan</item>
         <item>Dean DeBlois</item>
-        <item>Joe Russo, Anthony Russo</item>
+        <item>Joe Russo</item>
         <item>Josie Rourke</item>
         <item>Yuen Woo-ping</item>
         <item>Christian Rivers</item>
         <item>Julius Avery</item>
-        <item>Phil Johnston, Rich Moore</item>
+        <item>Phil Johnston</item>
         <item>Otto Bathurst</item>
-        <item>Rodney Rothman, Peter Ramsey</item>
+        <item>Rodney Rothman</item>
         <item>Alexey Sidorov</item>
     </string-array>
 
@@ -320,22 +324,22 @@
     </string-array>
 
     <string-array name="tv_director">
-        <item>Greg Berlanti, Marc Guggenheim, Andrew Kreisberg</item>
+        <item>Greg Berlanti</item>
         <item>Jeremy Carver</item>
         <item>Akira Toriyama</item>
         <item>Tetsuya Kakihara</item>
         <item>Seth MacFarlane</item>
-        <item>Greg Berlanti, Geoff Johns, Andrew Kreisberg</item>
-        <item>David Benioff, D. B. Weiss</item>
+        <item>Greg Berlanti</item>
+        <item>David Benioff</item>
         <item>Bruno Heller</item>
         <item>Shonda Rhimes</item>
         <item>David Farr</item>
         <item>Scott Buck</item>
         <item>Masashi Kishimoto</item>
-        <item>Donald P. Bellisario, Don McGill</item>
+        <item>Donald P. Bellisario</item>
         <item>Roberto Aguirre-Sacasa</item>
         <item>Paul Abbott</item>
-        <item>Greg Berlanti, Andrew Kreisberg, Ali Adler</item>
+        <item>Greg Berlanti</item>
         <item>Eric Kripke</item>
         <item>Matt Groening</item>
         <item>Steve Blackman</item>
