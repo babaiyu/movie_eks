@@ -32,10 +32,10 @@
         <TextView
             android:id="@+id/item_release"
             style="@style/TextSmall"
-            android:textColor="@color/colorPrimary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/release" />
+            android:text="@string/release"
+            android:textColor="@color/colorPrimary" />
 
         <TextView
             android:id="@+id/item_description"

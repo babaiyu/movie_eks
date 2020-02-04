@@ -1,11 +1,8 @@
 <resources>
     <string name="app_name">Movie Eks</string>
-    <string name="title_home">Film</string>
-    <string name="title_dashboard">TV Show</string>
-    <string name="title_notifications">Notifikasi</string>
     <string name="movies">Film</string>
     <string name="tv_shows">Acara TV</string>
-    <string name="image_banner">Gambar Banner</string>
+    <string name="image_banner">Gambar Spanduk</string>
     <string name="title">Judul</string>
     <string name="release">Rilis</string>
     <string name="score">Skor</string>

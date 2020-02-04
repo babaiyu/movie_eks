@@ -1,6 +1,7 @@
 package com.babaiyu.movieeks.ui.dashboard
 
 import android.content.Intent
+import android.content.res.TypedArray
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,13 +11,21 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.babaiyu.movieeks.DetailActivity
 import com.babaiyu.movieeks.R
-import com.babaiyu.movieeks.`interface`.CardList
 import com.babaiyu.movieeks.`interface`.DataDetail
 import com.babaiyu.movieeks.components.CardListAdapter
 
 class DashboardFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View) {}
+
+    private lateinit var tvTitle: Array<String>
+    private lateinit var tvRelease: Array<String>
+    private lateinit var tvDescription: Array<String>
+    private lateinit var tvScore: Array<String>
+    private lateinit var tvDuration: Array<String>
+    private lateinit var tvDirector: Array<String>
+    private lateinit var tvCaster: Array<String>
+    private lateinit var tvPhoto: TypedArray
 
     private lateinit var rvTVShow: RecyclerView
     private val listTVShow = ArrayList<DataDetail>()
@@ -38,14 +47,14 @@ class DashboardFragment : Fragment(), View.OnClickListener {
     }
 
     private fun getListTVShows(): ArrayList<DataDetail> {
-        val tvTitle = resources.getStringArray(R.array.tv_title)
-        val tvRelease = resources.getStringArray(R.array.tv_release)
-        val tvDescription = resources.getStringArray(R.array.tv_description)
-        val tvScore = resources.getStringArray(R.array.tv_score)
-        val tvDuration = resources.getStringArray(R.array.tv_duration)
-        val tvDirector = resources.getStringArray(R.array.tv_director)
-        val tvCaster = resources.getStringArray(R.array.tv_caster)
-        val tvPhoto = resources.obtainTypedArray(R.array.tv_photo)
+        tvTitle = resources.getStringArray(R.array.tv_title)
+        tvRelease = resources.getStringArray(R.array.tv_release)
+        tvDescription = resources.getStringArray(R.array.tv_description)
+        tvScore = resources.getStringArray(R.array.tv_score)
+        tvDuration = resources.getStringArray(R.array.tv_duration)
+        tvDirector = resources.getStringArray(R.array.tv_director)
+        tvCaster = resources.getStringArray(R.array.tv_caster)
+        tvPhoto = resources.obtainTypedArray(R.array.tv_photo)
 
         val list = ArrayList<DataDetail>()
         for (index in tvTitle.indices) {
@@ -70,18 +79,8 @@ class DashboardFragment : Fragment(), View.OnClickListener {
         rvTVShow.adapter = listTVShowAdapter
 
         listTVShowAdapter.onItemClick = { item ->
-            val dataIntent = DataDetail(
-                item.title,
-                item.release,
-                item.description,
-                item.score,
-                item.duration,
-                item.director,
-                item.caster,
-                item.photo
-            )
             val detailIntent = Intent(context, DetailActivity::class.java)
-            detailIntent.putExtra(DetailActivity.EXTRA_DATA, dataIntent)
+            detailIntent.putExtra(DetailActivity.EXTRA_DATA, item)
             startActivity(detailIntent)
         }
     }

@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">Movie Eks</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
     <string name="movies">Movies</string>
     <string name="tv_shows">TV Shows</string>
     <string name="image_banner">Image Banner</string>
@@ -13,7 +10,7 @@
     <string name="director">Director</string>
     <string name="description">Description</string>
     <string name="caster">Caster</string>
-    
+
     <string name="change_language">Change Language</string>
 
     <!--    ========== MOVIES ==========-->

@@ -7,10 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.babaiyu.movieeks.R
-import com.babaiyu.movieeks.`interface`.CardList
 import com.babaiyu.movieeks.`interface`.DataDetail
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 
 class CardListAdapter(private val listItem: ArrayList<DataDetail>) :
     RecyclerView.Adapter<CardListAdapter.CardListHolder>() {

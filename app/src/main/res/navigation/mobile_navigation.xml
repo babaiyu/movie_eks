@@ -2,32 +2,18 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.babaiyu.movieeks.ui.home.HomeFragment"
         android:label="Movie Eks"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_navigation_home_to_detailActivity"
-            app:destination="@id/detailActivity" />
-    </fragment>
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.babaiyu.movieeks.ui.dashboard.DashboardFragment"
         android:label="Movie Eks"
-        tools:layout="@layout/fragment_dashboard" >
-        <action
-            android:id="@+id/action_navigation_dashboard_to_detailActivity"
-            app:destination="@id/detailActivity" />
-    </fragment>
-    <activity
-        android:id="@+id/detailActivity"
-        android:name="com.babaiyu.movieeks.DetailActivity"
-        android:label="activity_detail"
-        tools:layout="@layout/activity_detail" />
+        tools:layout="@layout/fragment_dashboard" />
 
 </navigation>

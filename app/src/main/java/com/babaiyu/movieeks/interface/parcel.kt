@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class DataDetail (
+data class DataDetail(
     var title: String,
     var release: String,
     var description: String,
@@ -13,12 +13,4 @@ data class DataDetail (
     var director: String,
     var caster: String,
     var photo: Int
-): Parcelable
-
-@Parcelize
-data class CardList(
-    var title: String,
-    var release: String,
-    var description: String,
-    var photo: Int
-): Parcelable
+) : Parcelable

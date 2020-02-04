@@ -1,9 +1,8 @@
 package com.babaiyu.movieeks
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toolbar
+import androidx.appcompat.app.AppCompatActivity
 import com.babaiyu.movieeks.`interface`.DataDetail
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_detail.*
@@ -21,16 +20,16 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
 
         val detail = intent.getParcelableExtra(EXTRA_DATA) as DataDetail
         title = detail.title
-        detail_title.text = detail.title
-        detail_score.text = detail.score
-        detail_release.text = detail.release
-        detail_duration.text = detail.duration
-        detail_director.text = detail.director
-        detail_description.text = detail.description
-        detail_caster.text = detail.caster
-        Glide.with(detail_image)
+        detailTitle.text = detail.title
+        detailScore.text = detail.score
+        detailRelease.text = detail.release
+        detailDuration.text = detail.duration
+        detailDirector.text = detail.director
+        detailDescription.text = detail.description
+        detailCaster.text = detail.caster
+        Glide.with(detailImage)
             .load(detail.photo)
-            .into(detail_image)
+            .into(detailImage)
     }
 
     override fun onSupportNavigateUp(): Boolean {
